@@ -1,0 +1,180 @@
+﻿@model  IEnumerable<ET.EncabezadoRecepcionDTO>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="row bg-light p-3 mt-auto align-items-center text-center">
+    <div class="row bg-light p-3 mt-auto align-items-center text-center">
+        <div class="col-md-2">
+            <a href="@Url.Action("Crear", "Recepcion")" class="btn btn-light">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+                Crear
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a href="@Url.Action("Index", "Recepcion") " class="btn btn-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
+                    <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z" />
+                    <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+                </svg>
+                Lista
+            </a>
+        </div>
+        
+
+
+        <div class="col-md-2 col-md-offset-2">
+            <a href="@Url.Action("Cerrar Sesion", "Recepcion")" class="btn btn-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                     class="bi bi-plus" viewBox="0 0 16 16">
+                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                </svg>
+                Cerrar Sesion
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="row p-3">
+    <h2 class="my-3">Recepciones</h2>
+
+    <div class="overflow-auto col-12 mt-5">
+        <table id="tablaIndex" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Descripcion
+                    </th>
+                    <th title="Fecha Ingreso">
+                        F. I
+                    </th>
+                    <th title="Fecha Vencimiento">
+                        F.V
+                    </th>
+                    <th>
+                        Responsable
+                    </th>
+                    <th>
+                        Bodega
+                    </th>
+                    <th>
+                        Proveedor
+                    </th>
+                    <th>
+                        Tipo Producto
+                    </th>
+                    <th>
+                        Parametro
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ID_EncabezadoRecepcion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescripcionEncabezadoRecepcion)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FechaIngreso)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fechaVencimiento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NombreUsuario)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescripcionBodega)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescripcionProveedor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescripcionTipoProducto)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DescripcionParametro)
+                        </td>
+                        <td>
+
+                            <a class="btn btn-outline-dark" title="Detalles" href="@Url.Action("GetRecepcion","Recepcion", new { id= @item.ID_EncabezadoRecepcion})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                </svg>
+                            </a>
+                            
+
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Eliminar Unidad Medida  </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="VaciarModelo()"></button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Toast -->
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+
+                <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#007aff"></rect>
+                </svg>
+
+                <strong class="me-auto">Del sistema</strong>
+                <small>Hace 3 seg</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" onclick="CerrarToast()"></button>
+            </div>
+            <div id="toast-bodyIndex" class="toast-body">
+
+            </div>
+        </div>
+    </div>
+
+        <script>
+
+            $('#tablaIndex').DataTable({
+                "pageLength": 5,
+                LengthMenu: [5, 10, 20, 50, 100, 200, 500],
+            });
+
+        </script>

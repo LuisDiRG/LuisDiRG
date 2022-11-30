@@ -1,0 +1,170 @@
+﻿@model ET.Usuario
+
+@{
+    ViewBag.Title = "GetUsuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row bg-light p-4 mt-auto align-items-center text-center">
+    <div class="col-md-3">
+        <a href="@Url.Action("Crear", "Usuario") " class="btn btn-light">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-plus" viewBox="0 0 16 16">
+                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+            </svg>
+            Crear
+        </a>
+
+    </div>
+    <div class="col-md-3">
+        <a href="@Url.Action("Index", "Usuario") " class="btn btn-light">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
+                <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z" />
+                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z" />
+            </svg>
+            Lista
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="@Url.Action("Editar","Usuario", new {  id= Model.ID_Usuario})" class="btn btn-light" id="btnUM">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
+                <path fill-rule="evenodd"
+                      d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z" />
+            </svg>
+            Actualizar
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a class="btn btn-light " href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop" onclick="llenarDatosModal(@Model.ID_Usuario,  '@Model.DescripcionUsuario','Eliminar')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-x" viewBox="0 0 16 16">
+                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+            Eliminar
+        </a>
+    </div>
+</div>
+
+<div class="row p-3">
+
+    <div class="row">
+
+        <h2 class="ms-4 mb-5"> Usuario Detalles</h2>
+
+    </div>
+
+
+    <div class="row mt-5">
+
+        <div class="col-3"></div>
+
+
+        <div class="col-6">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+
+                        <th>Primer Nombre</th>
+                        <th>Segundo Nombre</th>
+                        <th>Primer Apellido</th>
+                        <th>Segundo Apellido</th>
+                        <th>Nombre Usuario</th>
+                        <th>ID_Cedula</th>
+                        <th>Contraseña</th>
+                        <th>Rol</th> 
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                <td>
+                @Html.DisplayFor(modelItem => item.ID_Usuario)
+                </td>
+                <td>
+                @Html.DisplayFor(modelItem => item.PrimerNombre)
+                </td>
+                @Html.DisplayFor(modelItem => item.SegundoNombre)
+                <td>
+                </td>
+                @Html.DisplayFor(modelItem => item.PrimerApellido)
+                <td>
+                </td>
+                @Html.DisplayFor(modelItem => item.SegundoApellido)
+                <td>
+                </td>
+                @Html.DisplayFor(modelItem => item.NombreUsuario)
+                <td>
+                </td>
+                @Html.DisplayFor(modelItem => item.ID_Cedula)
+                <td>
+                </td>
+                @Html.DisplayFor(modelItem => item.Contraseña)
+                <td>
+                </td>
+                @Html.DisplayFor(modelItem => item.ID_Rol)
+                <td>
+                    </tbody>
+
+
+
+            </table>
+
+
+        </div>
+
+        <div class="col-3"></div>
+
+    </div>
+
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Eliminar Usuario  </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="VaciarModelo()"></button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Toast -->
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast fade hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <rect width="100%" height="100%" fill="#007aff"></rect>
+            </svg>
+
+            <strong class="me-auto">Del sistema</strong>
+            <small>Hace 3 seg</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
