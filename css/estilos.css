@@ -216,4 +216,24 @@ i {
     font-weight: 600;
 }
 
+.swiper {
+    width: 520px;
+    height: 500px;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-size:cover ;
+}
+
+.fondoProyectos{
+    background: radial-gradient(rgba(0, 87, 150, 0.192) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(0% 0% at -0.00% -0.20%, #005796 0%, #000 73.16%), radial-gradient(75.74% 16.12% at 9.34% 1.88%, #000 73.16%, #000 73.16%) !important
+}
+
 
