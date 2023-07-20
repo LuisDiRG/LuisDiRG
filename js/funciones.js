@@ -2,6 +2,9 @@ $(document).ready(function (){
     $("#profes1 div").hover(entrada,salida);
     $("#profes2 div").hover(entrada,salida);
     randomValues();
+    Levitar();
+    LevitarTit();
+    LevitarTit2();
 });
 
 function entrada(){
@@ -57,7 +60,38 @@ function randomValues() {
         duration: 1050,
         complete: randomValues
     });
-    console.log("BBB");
 }
 
+function Levitar() {
+    anime({
+        targets: '.cardQEDW',
+        translateY: 20,
+        duration: 1000,
+        direction: 'alternate',
+        easing: 'easeInOutQuad',
+        loop: true
+    });
+}
+
+function LevitarTit() {
+    anime({
+        targets: '.titQueEsDW',
+        translateY: 20,
+        duration: 1000,
+        direction: 'alternate',
+        easing: 'easeInOutQuad',
+        loop: true
+    });
+}
+
+function LevitarTit2() {
+    anime({
+        targets: '.titQueEsDW2',
+        translateY: 20,
+        duration: 1000,
+        direction: 'alternate',
+        easing: 'easeInOutQuad',
+        loop: true
+    });
+}
 requestAnimationFrame(loop);
