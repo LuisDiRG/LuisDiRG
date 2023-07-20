@@ -204,8 +204,7 @@ i {
 
 .cardQEDW{
     min-height: 70vh;
-    /*width: 25.1875rem;
-    height: 40.5625rem;*/
+    z-index:40;
     border-radius: 3.125rem;
     background: rgba(84, 84, 84, 0.10);
     box-shadow: 0px 4px 30px 0px rgba(217, 0, 222, 0.40);
@@ -217,7 +216,4 @@ i {
     font-weight: 600;
 }
 
-.imgQEDQ{
-    /*height: 33%;*/
-}
 
