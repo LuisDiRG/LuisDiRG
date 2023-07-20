@@ -60,14 +60,6 @@ i {
 }
 
 
-
-
-
-.fondo {
-    background-color: #000000;
-}
-
-
 .col-md-4 {
     display: inline-block;
     overflow: hidden;
@@ -75,16 +67,24 @@ i {
     opacity: 0.65;
 }
 
-.profe {
-    transform: scale(1.2);
+.fondo{
+    background-color: #000000;
+}
+
+
+.profe1 {
+    transform: scale(0.8);
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    opacity: 0.65;
+}
+.profe2{
+    transform: scale(1);
     color: #FFFFFF
 }
 
 
-.profe1f {
+.profe1f{
     background-image: radial-gradient(ellipse at center, #031620, transparent 80%);
-}
-
-.profe2f {
-    background-image: radial-gradient(ellipse at center, rgba(87, 38, 44, 0.2), transparent 30%);
 }
