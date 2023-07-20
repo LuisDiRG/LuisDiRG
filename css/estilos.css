@@ -215,29 +215,69 @@ i {
     font-weight: 600;
 }
 .logos{
-    
-    width: 80%!important;
+    width: 50%!important;
     height: 70%!important;
     
 }
+#imgPhpLogo, #imgJsLogo {
+    margin-top: 5%!important;
+    
+}
+
+
 @media only screen and (max-width: 1250px) {
 
     .logos{
         
         width: 80%!important;
         height: 70%!important;
-        margin-top: 90px!important;
+       
     }
+    #imgPhpLogo,#imgJsLogo {
+        margin-top: 100%!important;
+        
+    }
+
+
 
 }
 @media only screen and (max-width: 1000px) and (min-width: 765px) {
 
     .logos{
         
-        width: 70%!important;
-        height: 40%!important;
-        margin-top: 150px!important;
+        width: 100%!important;
+        height: 50%!important;
+       
     }
+    #imgPhpLogo,#imgJsLogo {
+        margin-top: 150%!important;
+        
+    }
+    #imgHTMLLogo{
+        margin-top: 40%!important;
+    
+    }
+
+}
+@media only screen and (max-width: 765px) {
+
+    .logos{
+        
+        width: 70%!important;
+        height: 100%!important;
+        
+       
+    }
+    #imgPhpLogo, #imgJsLogo {
+        margin-top: 0!important;
+        
+    }
+    #imgHTMLLogo{
+        margin-top: 0!important;
+    
+    }
+
+    
 
 }
 .swiper {
