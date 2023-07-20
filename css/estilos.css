@@ -240,3 +240,109 @@ i {
     display: none;
 }
 
+/*CSS Gameboy*/
+
+.bdBT {
+    background: linear-gradient(#000, #2E1E3D);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.cardBT {
+    background-color: var(--colorPrincipal) !important;
+    background-size: contain;
+    box-shadow: 0 0 20px var(--colorPrincipal);
+    margin: 0 auto;
+}
+
+.cardBodyBT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cruz
+{
+    top: 50%; transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+}
+
+.boton
+{
+    top: 50%; transform: translateY(-50%);
+    width: 160px;
+    height: auto;
+    padding-right: 10px;
+}
+
+.logoGameboy
+{
+    width: 300px;
+    height: auto;
+}
+
+.gameboy-advance {
+    width: 480px;
+    height: 350px;
+    background-color: #656565;
+    border: 10px solid #333;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Agregamos el display flex */
+    justify-content: center; /* Centramos horizontalmente */
+    align-items: center; /* Centramos verticalmente */
+}
+
+#map{
+    background:url('https://i.imgur.com/cR9pz0W.jpg');
+    width: 384px;
+    height:320px;
+    zoom:1;
+    left: 360px;
+    top: 155px;
+    position: relative;}
+
+.land {
+    float: left;
+    width: 16px;
+    height: 16px;
+}
+.L2 {
+    background: url("https://i.imgur.com/gmbmP6M.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+.L1 {
+    background: rgba(0, 255, 0, 0.0);
+}
+.L0 {
+    background: rgba(255, 0, 0, 0.0);
+}
+.gameboy {
+    position: absolute;
+    margin-top: -315px;
+    margin-left: -550px;
+    left: 50%;
+    top: 50%;
+    width: 1100px;
+    height: 630px;
+    zoom: 1;
+}
+@media screen and (max-width: 1150px) {
+    .gameboy {
+        zoom: 0.8;
+    }
+}
+@media screen and (max-width: 900px) {
+    .gameboy {
+        zoom: 0.5;
+    }
+}
+@media screen and (max-width: 550px) {
+    .gameboy {
+        zoom: 0.4;
+    }
+}
+/*CSS Gameboy*/
