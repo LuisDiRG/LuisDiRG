@@ -98,7 +98,7 @@ i {
 }
   
 .card-carousel .cardC {
-    background: rgba(31, 31, 31, 0.33);
+    background: rgba(28, 28, 28, 0.477);
     width: var(--card-width);
     max-width: var(--card-max-width);
     padding: 1em;
@@ -119,11 +119,11 @@ i {
 
 /* Rectangle 23 */
   
-.card.highlight {
+.cardC.highlight {
     -webkit-box-shadow: 0px 0px 8px 5px #0d0d0d;
     -moz-box-shadow: 0px 0px 8px 5px #0d0d0d;
     box-shadow: 0px 0px 8px 5px #0d0d0d;
-    background: #0d0d0d;
+    background: #1d1d1d;
     filter: brightness(1)
 }
 
@@ -149,7 +149,7 @@ i {
 }
 
 .fondo{
-    background-color: #000000;
+    background: radial-gradient(rgba(0, 87, 150, 0.192) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(0% 0% at -0.00% -0.20%, #005796 0%, #000 73.16%), radial-gradient(75.74% 16.12% at 9.34% 1.88%, #000 73.16%, #000 73.16%) !important
 }
 
 
