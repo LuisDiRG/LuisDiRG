@@ -74,6 +74,11 @@ i {
 }
 
 
+.fondo{
+    background-color: #000000;
+}
+
+
 .profe1 {
     transform: scale(0.8);
     display: inline-block;
@@ -91,9 +96,6 @@ i {
     background-image: radial-gradient(ellipse at center, #031620, transparent 80%);
 }
 
-.profe2f {
-    background-image: radial-gradient(ellipse at center, rgba(87, 38, 44, 0.2), transparent 30%);
-}
 
 
 .QueEsDW{
