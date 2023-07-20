@@ -97,12 +97,8 @@ i {
     transition: all .1s ease;
 }
   
-.card-carousel .cardC {
-
-    background: rgba(28, 28, 28, 0.477);
-
+.card-carousel .card {
     background: rgba(31, 31, 31, 0.33);
-
     width: var(--card-width);
     max-width: var(--card-max-width);
     padding: 1em;
@@ -123,11 +119,11 @@ i {
 
 /* Rectangle 23 */
   
-.cardC.highlight {
+.card.highlight {
     -webkit-box-shadow: 0px 0px 8px 5px #0d0d0d;
     -moz-box-shadow: 0px 0px 8px 5px #0d0d0d;
     box-shadow: 0px 0px 8px 5px #0d0d0d;
-    background: #1d1d1d;
+    background: #0d0d0d;
     filter: brightness(1)
 }
 
