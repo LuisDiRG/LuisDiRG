@@ -97,7 +97,7 @@ i {
     transition: all .1s ease;
 }
   
-.card-carousel .card {
+.card-carousel .cardC {
     background: rgba(31, 31, 31, 0.33);
     width: var(--card-width);
     max-width: var(--card-max-width);
