@@ -94,7 +94,7 @@ class CardCarousel extends DraggingEvent {
     // DOM elements
     this.container = container
     this.controllerElement = controller
-    this.cards = container.querySelectorAll(".cardC")
+    this.cards = container.querySelectorAll(".card")
     
     // Carousel data
     this.centerIndex = (this.cards.length - 1) / 2;
