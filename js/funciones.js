@@ -4,14 +4,16 @@ $(document).ready(function (){
 });
 
 function entrada(){
-    $(this).addClass("profe");
+    $(this).addClass("profe2");
     $(this).fadeTo("fast","1");
 }
 
 function salida(){
-    $(this).removeClass("profe");
+    $(this).removeClass("profe2");
     $(this).fadeTo("fast","0.65");
 }
+
+
 var animation2 = anime({
     targets: '.arribayabajo2',
     translateY: -12,
