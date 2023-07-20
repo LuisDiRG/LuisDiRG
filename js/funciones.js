@@ -1,6 +1,7 @@
 $(document).ready(function (){
     $("#profes1 div").hover(entrada,salida);
     $("#profes2 div").hover(entrada,salida);
+    randomValues();
 });
 
 function entrada(){
@@ -39,6 +40,22 @@ function loop(t) {
 
 
     customRAF = requestAnimationFrame(loop);
+}
+
+function randomValues() {
+    anime({
+        targets: '.imgQEDQ',
+        translateX: function() {
+            do{
+                x = anime.random(-100, window.screen.width-400);
+            }while(x < window.screen.width-700 && x > window.screen.width-1300);
+            return x;
+        },
+        easing: 'easeInOutQuad',
+        duration: 1050,
+        complete: randomValues
+    });
+    console.log("BBB");
 }
 
 requestAnimationFrame(loop);
