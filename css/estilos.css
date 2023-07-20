@@ -60,6 +60,93 @@ i {
     background-repeat: no-repeat;
 
 }
+.plan {
+    padding-bottom: 50px;
+    background: radial-gradient(189.57% 126.34% at 18.55% 14.67%, rgba(0, 87, 150, 0.192) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(16.60% 16.31% at -0.00% -0.20%, #000000 0%, #000 73.16%), radial-gradient(75.74% 16.12% at 9.34% 1.88%, #000 73.16%, #000 73.16%) !important;
+    background-repeat: no-repeat;
+}
+
+.visuallyhidden {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    opacity: 0;
+}
+
+.card-carousel {
+    --card-width: 80%;
+    --card-max-width: 350px;
+    --card-height: 400px;
+    --carousel-min-width: 600px;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: var(--card-height);
+    min-width: var(--carousel-min-width);
+    transition: filter .3s ease;
+}
+
+@media screen and (max-width: 640px) {
+    .card-carousel {
+      margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+    }
+}
+  
+.card-carousel.smooth-return {
+    transition: all .1s ease;
+}
+  
+.card-carousel .card {
+    background: rgba(31, 31, 31, 0.33);
+    width: var(--card-width);
+    max-width: var(--card-max-width);
+    padding: 1em;
+    min-width: 250px;
+    height: var(--card-height);
+    position: absolute;
+    margin: 0 auto;
+    color: rgba(0,87,150,100%);
+    transition: inherit;
+    -webkit-box-shadow: 0px 0px 6px 5px rgba(0,87,150,100%);
+    -moz-box-shadow: 0px 0px 6px 5px rgba(0,87,150,100%);
+    box-shadow: 0px 0px 6px 5px rgba(0,87,150,100%);
+    border-radius: 1em;
+    filter: brightness(.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Rectangle 23 */
+  
+.card.highlight {
+    -webkit-box-shadow: 0px 0px 8px 5px #0d0d0d;
+    -moz-box-shadow: 0px 0px 8px 5px #0d0d0d;
+    box-shadow: 0px 0px 8px 5px #0d0d0d;
+    background: #0d0d0d;
+    filter: brightness(1)
+}
+
+.titulo-carusel {
+    color: #FFFFFF;;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.bi-check-circle-fill {
+    color: #005796;
+    align-items: start;
+    padding-bottom: 10px;
+}
+
+.bi-check-circle-fill span{
+    padding-left: 10px;
+    color: #FFFFFF;
+    font-size: 25px;
+}
 
 .fondo{
     background-color: #000000;
