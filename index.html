@@ -254,6 +254,24 @@
         </div>
     </div>
 
+    <div class="p-5 fondoProyectos" style="background-color: #060714;">
+        <h1 class="text-center p-3">
+            Proyectos
+        </h1>
+        <div class="swiper mySwiper" style="border-radius: 20px; position: relative;">
+            <div class="swiper-wrapper ">
+                <a class="swiper-slide" href="./Proyectos/NeonPark/index.html" style="background-image: url('./img/neonpage.jpg');"></a>
+                <a class="swiper-slide" href="./Proyectos/CTP/index.html" style="background-image: url('./img/Artespage.jpg');"></a>
+                <a class="swiper-slide" href="./Proyectos/Muebleria/index.html" style="background-image: url('./img/muebleriapage.jpg');"></a>
+                <a class="swiper-slide" href="./Proyectos/Condominio/index.html" style="background-image: url('./img/Condominiopage.jpg');"></a>
+                <a class="swiper-slide" href="./Proyectos/LaLima/index.html" style="background-image: url('./img/lalimapage.jpg');"></a>
+                <a class="swiper-slide" href="./Proyectos/GymRaptor/index.html" style="background-image: url('./img/gympage.jpg');"></a>
+                <a class="swiper-slide" href="./Proyectos/MundoDona/index.html" style="background-image: url('./img/donapage.jpg');"></a>
+                <a class="swiper-slide" href="./Proyectos/Funeraria/index.html" style="background-image: url('./img/funerariapage.jpg');"></a>
+            </div>
+        </div>
+    </div>
+
     <footer class="bg-black text-center text-lg-start text-white"   >
         <!-- Grid container -->
         <div class="container p-4"  style="background-color: black">
@@ -365,6 +383,17 @@
 
     <!-- End of .container -->
 
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "cards",
+                grabCursor: true,
+            });
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
             integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
