@@ -1,4 +1,69 @@
-.fondo{
+* {
+    color: #bababa;
+}
+
+:root {
+
+    --colorPrincipal: #0095ff;
+}
+
+.nav-link {
+    color: #bababa !important;
+}
+
+.tituloGrande {
+    font-size: 3rem;
+    color: var(--colorPrincipal);
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+
+}
+
+
+a {
+    text-decoration: none !important;
+    color: #bababa !important;
+    font-size: 1.2rem;
+}
+
+
+i {
+    color: var(--colorPrincipal);
+}
+
+.fondoHero {
+
+
+    height: 100%;
+    background: radial-gradient(189.57% 126.34% at -18.55% 14.67%, rgba(0, 87, 150, 0.192) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(16.60% 16.31% at -0.00% -0.20%, #005796 0%, #000 73.16%), radial-gradient(75.74% 16.12% at 9.34% 1.88%, #000 73.16%, #000 73.16%) !important;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+}
+
+.img {
+
+    height: 25rem;
+
+
+    background: url(../img/3.gif), linear-gradient(140deg, #000a11, #00070c);
+
+    background-size: contain;
+    background-position: center;
+    background-blend-mode: lighten;
+    opacity: 0.12;
+    background-repeat: no-repeat;
+
+}
+
+
+
+
+
+.fondo {
     background-color: #000000;
 }
 
@@ -9,16 +74,17 @@
     transition: transform 0.3s ease;
     opacity: 0.65;
 }
-.profe{
+
+.profe {
     transform: scale(1.2);
     color: #FFFFFF
 }
 
 
-.profe1f{
+.profe1f {
     background-image: radial-gradient(ellipse at center, #031620, transparent 80%);
 }
 
-.profe2f{
+.profe2f {
     background-image: radial-gradient(ellipse at center, rgba(87, 38, 44, 0.2), transparent 30%);
 }
