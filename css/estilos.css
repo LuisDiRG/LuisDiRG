@@ -203,7 +203,6 @@ i {
 }
 
 .cardQEDW{
-    min-height: 70vh;
     z-index:40;
     border-radius: 3.125rem;
     background: rgba(84, 84, 84, 0.10);
@@ -215,7 +214,26 @@ i {
     color: #ffffff;
     font-weight: 600;
 }
+@media only screen and (max-width: 1250px) {
 
+    .logos{
+        
+        width: 80%!important;
+        height: 70%!important;
+        margin-top: 90px!important;
+    }
+
+}
+@media only screen and (max-width: 1000px) and (min-width: 765px) {
+
+    .logos{
+        
+        width: 70%!important;
+        height: 40%!important;
+        margin-top: 150px!important;
+    }
+
+}
 .swiper {
     width: 520px;
     height: 500px;
