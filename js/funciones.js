@@ -95,3 +95,60 @@ function LevitarTit2() {
     });
 }
 requestAnimationFrame(loop);
+
+
+/* header */
+
+let x = false;
+let y = false;
+
+function AnimacionHeader(){
+    
+    if(x === false){
+        anime({
+        targets: '#imgLogo',
+        width: ['10%', '5%'],
+        easing: 'easeInOutQuad'
+    });
+    x = true;
+    }else
+        return;
+}
+
+function AnimacionHeaderGrande(){
+    if(y === false){
+        console.log('bb');
+        anime({
+        targets: '#imgLogo',
+        width: ['5%', '10%'],
+        easing: 'easeInOutQuad'
+    });
+        y = true;
+    }else{
+        
+        return;
+    }
+        
+}
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.fondoHeaderM');
+  const hero = document.querySelector('#Inicio');
+  const scrollPosition = window.scrollY;
+  const imgLogo = document.querySelector('#imgLogo');
+  if (scrollPosition >= hero.offsetHeight) {
+    header.classList.add('fixed-top');
+    header.classList.remove('sticky-top');
+    header.classList.add('fondoHeader');
+    header.classList.remove('fondoHeaderFixed');
+    AnimacionHeader();
+    y = false;
+    
+  } else {
+    header.classList.remove('fixed-top');
+    header.classList.add('sticky-top');
+    header.classList.add('fondoHeaderFixed');
+    header.classList.remove('fondoHeader');
+    x = false;
+    AnimacionHeaderGrande();
+  }
+});
