@@ -8,6 +8,15 @@ $(document).ready(function (){
     CambiarWidthImg();
 
 flujoCoontenidoHabilidad = $('.cardAcitudes').html();
+
+    if(window.screen.width < 768 && flujoCoontenidoHabilidad == $('.cardAcitudes').html()){
+
+        let contenidoHabilidades = $('.cardAcitudes').html();
+        let BloqueMario = $('.bloqueMario').html();
+
+        $('.cardAcitudes').html(BloqueMario);
+        $('.bloqueMario').html(contenidoHabilidades);
+    }
     $(window).resize(function(){
 
         FlujoNormal();
