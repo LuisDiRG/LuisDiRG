@@ -6,7 +6,45 @@ $(document).ready(function (){
     LevitarTit();
     LevitarTit2();
     CambiarWidthImg();
+
+flujoCoontenidoHabilidad = $('.cardAcitudes').html();
+    $(window).resize(function(){
+
+        FlujoNormal();
+
+        if(window.screen.width < 1250 && window.screen.width >= 850){
+            console.log('BBB');
+            $('.bloqueIzq').attr('style','padding-top: 25%!important;');
+            $('.cardAcitudes').attr('style','padding-top: 35%!important;');
+        }else if(window.screen.width < 850 && window.screen.width >= 830){
+            console.log('CCC');
+            $('.bloqueIzq').attr('style','padding-top: 30%!important;');
+            $('.cardAcitudes').attr('style','padding-top: 60%!important;');
+        }else if(window.screen.width < 830 && window.screen.width >= 800){
+            console.log('DDD');
+            $('.cardAcitudes').attr('style','padding-top: 60%!important;');
+        }else if(window.screen.width < 768 && flujoCoontenidoHabilidad == $('.cardAcitudes').html()){
+            
+            let contenidoHabilidades = $('.cardAcitudes').html();
+            let BloqueMario = $('.bloqueMario').html();
+
+            $('.cardAcitudes').html(BloqueMario);
+            $('.bloqueMario').html(contenidoHabilidades);
+        }
+    });
+    
 });
+
+let flujoCoontenidoHabilidad;
+function FlujoNormal(){
+    if(window.screen.width > 768 && flujoCoontenidoHabilidad != $('.cardAcitudes').html()){
+
+        let contenidoHabilidades = $('.cardAcitudes').html();
+        let BloqueMario = $('.bloqueMario').html();
+        $('.cardAcitudes').html(BloqueMario);
+        $('.bloqueMario').html(contenidoHabilidades);
+    }
+}
 
 function entrada(){
     $(this).addClass("profe2");
