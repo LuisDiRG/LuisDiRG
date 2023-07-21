@@ -437,3 +437,64 @@ i {
 .fondoHeaderFixed{
     background: linear-gradient(173deg, rgba(0, 87, 150, 0.03) 0%, rgba(0, 0, 0, 0.00) 99.48%), rgba(4, 4, 4, 0.80);
 }
+.titQueEsDW{
+    color: #FFF;
+    font-weight: 600;
+    font-size: 4rem;
+}
+.titQueEsDW3{
+    color: #FFF;
+    font-weight: 600;
+    font-size: 4rem;
+}
+/* Mario y Steve*/
+.fondoMarioSteve{
+    background: radial-gradient(32.25% 36.80% at 51.77% 70.98%, rgba(71, 121, 31, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.78) 100%), radial-gradient(38.46% 31.75% at 43.34% 28.14%, #FF0404 0%, #190000 90.10%, #000 100%);
+}
+.bordeRojo{
+    border-radius: 50px;
+    background: rgba(135, 135, 135, 0.10);
+    box-shadow: 0px 4px 40px 0px rgba(255, 17, 17, 0.65);
+}
+.bordeVerde{
+    border-radius: 50px !important;
+    background: rgba(135, 135, 135, 0.10);
+    box-shadow: 0px 4px 40px 0px rgba(71, 121, 31, 0.65);
+}
+.cardHabilidades{
+    margin-top: 30%;
+    min-width: 100%;
+}
+
+.cardOportunidades{
+    margin-top: 1%
+}
+
+.cardHabilidades{
+    margin-top: 28%;
+    min-width: 100%;
+}
+.steve{
+    margin-top: 40%;
+    margin-left: 18%;
+}
+.cardOportunidades{
+    margin-top: 27%
+}
+#imgBotones{
+    min-height: 20px;
+}
+
+/* Fondo de Mario y Steve */
+.fondoMarioSteve {
+    background: radial-gradient(32.25% 36.80% at 51.77% 70.98%, rgba(71, 121, 31, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.78) 100%), radial-gradient(38.46% 31.75% at 43.34% 28.14%, #FF0404 0%, #190000 90.10%, #000 100%);
+}
+
+@media only screen and (max-width: 600px) {
+    .bordeVerde{
+        font-size: 0px!important;
+    }
+}
+
+
+
