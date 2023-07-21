@@ -466,10 +466,6 @@ i {
     min-width: 100%;
 }
 
-.cardOportunidades{
-    margin-top: 1%
-}
-
 .cardHabilidades{
     margin-top: 28%;
     min-width: 100%;
@@ -479,7 +475,7 @@ i {
     margin-left: 18%;
 }
 .cardOportunidades{
-    margin-top: 40%
+    margin-top: 40%;
 }
 #imgBotones{
     min-height: 20px;
