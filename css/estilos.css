@@ -490,11 +490,5 @@ i {
     background: radial-gradient(32.25% 36.80% at 51.77% 70.98%, rgba(71, 121, 31, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.78) 100%), radial-gradient(38.46% 31.75% at 43.34% 28.14%, #FF0404 0%, #190000 90.10%, #000 100%);
 }
 
-@media only screen and (max-width: 600px) {
-    .bordeVerde{
-        font-size: 0px!important;
-    }
-}
-
 
 
