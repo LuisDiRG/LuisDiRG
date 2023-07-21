@@ -5,6 +5,7 @@ $(document).ready(function (){
     Levitar();
     LevitarTit();
     LevitarTit2();
+    CambiarWidthImg();
 });
 
 function entrada(){
@@ -96,18 +97,26 @@ function LevitarTit2() {
 }
 requestAnimationFrame(loop);
 
-
 /* header */
+function CambiarWidthImg(){
+    
+    if(window.screen.width > 600){
+        $('#imgLogo').attr('width','15%');
+    }else{
+        $('#imgLogo').attr('width','20%');
+    }
+}
+
 
 let x = false;
 let y = false;
 
-function AnimacionHeader(){
+function AnimacionHeader(inicio, final){
     
     if(x === false){
         anime({
         targets: '#imgLogo',
-        width: ['10%', '5%'],
+        width: [inicio, final],
         easing: 'easeInOutQuad'
     });
     x = true;
@@ -115,12 +124,12 @@ function AnimacionHeader(){
         return;
 }
 
-function AnimacionHeaderGrande(){
+function AnimacionHeaderGrande(inicio,final){
     if(y === false){
         console.log('bb');
         anime({
         targets: '#imgLogo',
-        width: ['5%', '10%'],
+        width: [inicio, final],
         easing: 'easeInOutQuad'
     });
         y = true;
@@ -136,19 +145,40 @@ window.addEventListener('scroll', function() {
   const scrollPosition = window.scrollY;
   const imgLogo = document.querySelector('#imgLogo');
   if (scrollPosition >= hero.offsetHeight) {
+      if(window.screen.width > 600){
+        ClasesLlamar(header);
+        AnimacionHeader('15%','10%');
+        y = false;
+      }else{
+        ClasesLlamar(header);
+        AnimacionHeader('20%','15%');
+        y = false;
+      }
+    
+    
+  } else {
+    
+    if(window.screen.width > 600){
+        ClasesLlamar2(header);
+        x = false;
+        AnimacionHeaderGrande('10%', '15%');
+    }else{
+        ClasesLlamar2(header);
+        x = false;
+        AnimacionHeaderGrande('15%', '20%');
+    }
+  }
+});
+
+function ClasesLlamar(header){
     header.classList.add('fixed-top');
     header.classList.remove('sticky-top');
     header.classList.add('fondoHeader');
     header.classList.remove('fondoHeaderFixed');
-    AnimacionHeader();
-    y = false;
-    
-  } else {
+}
+function ClasesLlamar2(header){
     header.classList.remove('fixed-top');
-    header.classList.add('sticky-top');
-    header.classList.add('fondoHeaderFixed');
-    header.classList.remove('fondoHeader');
-    x = false;
-    AnimacionHeaderGrande();
-  }
-});
+        header.classList.add('sticky-top');
+        header.classList.add('fondoHeaderFixed');
+        header.classList.remove('fondoHeader');
+}
