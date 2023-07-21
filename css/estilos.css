@@ -74,9 +74,9 @@ i {
 }
 
 .card-carousel {
-    --card-width: 40%;
-    --card-max-width: 100%;
-    --card-height: 400px;
+    
+    
+    --card-height: 470px!important;
     
     z-index: 1;
     position: relative;
@@ -112,7 +112,7 @@ i {
     background: rgba(31, 31, 31, 0.33);
     width: var(--card-width);
     max-width: var(--card-max-width);
-    padding: 1em;
+    padding: 1em!important;
     
     height: var(--card-height);
     position: absolute;
@@ -135,7 +135,7 @@ i {
     -moz-box-shadow: 0px 0px 8px 5px #0d0d0d;
     box-shadow: 0px 0px 8px 5px #0d0d0d;
     background: #0d0d0d;
-    padding-bottom: 400px!important;
+    padding-bottom: 500px!important;
     filter: brightness(1)
 }
 
@@ -147,7 +147,6 @@ i {
     padding-top: 20px;
     font-size: 30px;
 }
-
 .bi-check-circle-fill {
     color: #005796;
     align-items: start;
