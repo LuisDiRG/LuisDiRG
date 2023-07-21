@@ -74,22 +74,33 @@ i {
 }
 
 .card-carousel {
-    --card-width: 80%;
-    --card-max-width: 350px;
+    --card-width: 40%;
+    --card-max-width: 100%;
     --card-height: 400px;
-    --carousel-min-width: 600px;
+    
     z-index: 1;
     position: relative;
     margin: 0 auto;
-    width: 100%;
+    
+    width: 90%;
     height: var(--card-height);
     min-width: var(--carousel-min-width);
     transition: filter .3s ease;
 }
 
+
 @media screen and (max-width: 640px) {
     .card-carousel {
-      margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+        --card-width: 55%;
+        
+        --card-height: 400px;
+        
+        z-index: 1;
+        position: relative;
+        width: 100%;
+        height: var(--card-height);
+        min-width: var(--carousel-min-width);
+        transition: filter .3s ease;
     }
 }
   
@@ -102,7 +113,7 @@ i {
     width: var(--card-width);
     max-width: var(--card-max-width);
     padding: 1em;
-    min-width: 250px;
+    
     height: var(--card-height);
     position: absolute;
     margin: 0 auto;
@@ -124,6 +135,7 @@ i {
     -moz-box-shadow: 0px 0px 8px 5px #0d0d0d;
     box-shadow: 0px 0px 8px 5px #0d0d0d;
     background: #0d0d0d;
+    padding-bottom: 400px!important;
     filter: brightness(1)
 }
 
