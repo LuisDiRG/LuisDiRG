@@ -147,11 +147,11 @@ window.addEventListener('scroll', function() {
   if (scrollPosition >= hero.offsetHeight) {
       if(window.screen.width > 600){
         ClasesLlamar(header);
-        AnimacionHeader('15%','10%');
+        AnimacionHeader('10%','5%');
         y = false;
       }else{
         ClasesLlamar(header);
-        AnimacionHeader('20%','15%');
+        AnimacionHeader('10%','15%');
         y = false;
       }
     
@@ -161,11 +161,11 @@ window.addEventListener('scroll', function() {
     if(window.screen.width > 600){
         ClasesLlamar2(header);
         x = false;
-        AnimacionHeaderGrande('10%', '15%');
+        AnimacionHeaderGrande('5%', '10%');
     }else{
         ClasesLlamar2(header);
         x = false;
-        AnimacionHeaderGrande('15%', '20%');
+        AnimacionHeaderGrande('10%', '15%');
     }
   }
 });
