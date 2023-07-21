@@ -428,3 +428,12 @@ i {
     }
 }
 /*CSS Gameboy*/
+
+.fondoHeader{
+   /*min-height: 10%;*/
+   background: linear-gradient(173deg, rgba(0, 87, 150, 0.03) 0%, rgba(0, 0, 0, 0.00) 99.48%), #040404;
+}
+
+.fondoHeaderFixed{
+    background: linear-gradient(173deg, rgba(0, 87, 150, 0.03) 0%, rgba(0, 0, 0, 0.00) 99.48%), rgba(4, 4, 4, 0.80);
+}
